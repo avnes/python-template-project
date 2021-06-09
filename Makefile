@@ -1,4 +1,4 @@
-.PHONY: run install dev lint test coverage check
+.PHONY: run install dev lint test coverage check fix docker-test
 
 PACKAGE_DIR:=python_template_project
 
