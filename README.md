@@ -53,7 +53,7 @@ make coverage
 
 ### Install pre-commit hook
 
-The Git pre-commit hook rules are defined in <.pre-commit-config.yaml>
+The Git pre-commit hook rules are defined in [.pre-commit-config.yaml](.pre-commit-config.yaml)
 
 ```bash
 poetry shell
