@@ -21,4 +21,7 @@ coverage:
 	poetry run pytest --cov=$(PACKAGE_DIR) tests
 
 check:
-	poetry run pre-commit
+	poetry run pre-commit run --all-files
+
+fix:
+	poetry run pre-commit run
