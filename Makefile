@@ -12,16 +12,16 @@ install:
 	&& poetry install --no-dev
 
 dev:
-	source $(HOME).poetry/env && poetry install
+	source $(HOME)/.poetry/env && poetry install
 
 lint:
-	source $(HOME).poetry/env && poetry run flake8 $(PACKAGE_DIR) tests
+	source $(HOME)/.poetry/env && poetry run flake8 $(PACKAGE_DIR) tests
 
 test:
-	source $(HOME).poetry/env && poetry run pytest
+	source $(HOME)/.poetry/env && poetry run pytest
 
 coverage:
-	source $(HOME).poetry/env && poetry run pytest --cov=$(PACKAGE_DIR) tests
+	source $(HOME)/.poetry/env && poetry run pytest --cov=$(PACKAGE_DIR) tests
 
 check:
 	source $(HOME)/.poetry/env && poetry run pre-commit run --all-files
