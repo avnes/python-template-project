@@ -11,7 +11,7 @@ install:
 	&& poetry install --no-dev
 
 dev:
-	. $(HOME)/.poetry/env && poetry install && pre-commit install
+	. $(HOME)/.poetry/env && poetry install && poetry run pre-commit install
 
 lint:
 	. $(HOME)/.poetry/env && poetry run flake8 $(PACKAGE_DIR) tests
@@ -27,3 +27,6 @@ check:
 
 fix:
 	. $(HOME)/.poetry/env && poetry run pre-commit run
+
+docker-test:
+	docker build .
