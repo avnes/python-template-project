@@ -1,10 +1,8 @@
 FROM python:3.9
 
-RUN apt update && apt install -y vim
+COPY . sandbox/
 
-COPY . python-template-project/
-
-WORKDIR python-template-project
+WORKDIR sandbox
 
 RUN make install && make
 
@@ -13,5 +11,4 @@ RUN make dev && \
     make test && \
     make coverage
 
-RUN make check && \
-    make fix || true
+RUN make check || true
