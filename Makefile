@@ -1,4 +1,4 @@
-.PHONY: run install dev lint test coverage check fix docker-test
+.PHONY: run install dev lint test coverage check docker-test
 
 PACKAGE_DIR:=python_template_project
 
@@ -24,9 +24,6 @@ coverage:
 
 check:
 	. $(HOME)/.poetry/env && poetry run pre-commit run --all-files
-
-fix:
-	. $(HOME)/.poetry/env && poetry run pre-commit run
 
 docker-test:
 	docker build .
