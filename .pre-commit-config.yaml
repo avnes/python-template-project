@@ -9,7 +9,6 @@ repos:
   - id: check-case-conflict
   - id: check-docstring-first
   - id: check-merge-conflict
-  - id: check-added-large-files
   - id: debug-statements
   - id: detect-aws-credentials
   - id: detect-private-key
@@ -20,6 +19,11 @@ repos:
   hooks:
   - id: black
     name: Uncompromising code formatting using black
+- repo: https://github.com/pycqa/isort
+  rev: 5.8.0
+  hooks:
+  - id: isort
+    name: Sort the imports using isort
 - repo: https://github.com/pycqa/flake8
   rev: 3.9.2
   hooks:
@@ -31,8 +35,3 @@ repos:
   - id: bandit
     name: Find common security issues using bandit
     exclude: 'tests/'
-- repo: https://github.com/pycqa/isort
-  rev: 5.8.0
-  hooks:
-  - id: isort
-    name: Sort the imports using isort
