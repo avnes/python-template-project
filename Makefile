@@ -1,4 +1,4 @@
-.PHONY: run install dev lint test coverage check docker-test
+.PHONY: run install dev mypy lint test coverage check docker-test
 
 PACKAGE_DIR:=python_template_project
 
@@ -11,8 +11,12 @@ install:
 dev:
 	poetry install && poetry run pre-commit install
 
+mypy:
+	poetry run mypy $(PACKAGE_DIR) tests main.py
+
 lint:
-	poetry run flake8 $(PACKAGE_DIR) tests
+	$(MAKE) mypy
+	poetry run flake8 $(PACKAGE_DIR) tests main.py
 
 test:
 	poetry run pytest
