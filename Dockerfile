@@ -4,11 +4,15 @@ COPY . sandbox/
 
 WORKDIR sandbox
 
-RUN make install && make
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 
-RUN make dev && \
+RUN . $HOME/.poetry/env && make install && make
+
+RUN . $HOME/.poetry/env && \
+    make dev && \
     make lint && \
     make test && \
     make coverage
 
-RUN make check || true
+RUN . $HOME/.poetry/env && \
+    make check || true

@@ -9,6 +9,7 @@ This is an opinionated way to structure a Python project using a number of produ
 - flake8 from <https://github.com/pycqa/flake8>
 - bandit from <https://github.com/pycqa/bandit>
 - isort from <https://github.com/pycqa/isort>
+- pyenv from <https://github.com/pyenv/pyenv>
 - A test framework. In this project pytest and pytest-cov are used.
 
 ## Requirements
@@ -19,6 +20,8 @@ These software packages must be installed prior to using this repo:
 - bash
 - curl
 - git
+- poetry
+- pyenv
 
 ## Usage
 
