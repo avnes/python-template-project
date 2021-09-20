@@ -39,4 +39,4 @@ check:
 	poetry run pre-commit run --all-files
 
 docker-test:
-	docker build .
+	docker build -f Dockerfile-Make .
