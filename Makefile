@@ -1,4 +1,4 @@
-.PHONY: run install dev mypy pylint flake8 bandit lint test coverage check docker-test
+.PHONY: run install dev mypy pylint flake8 bandit flynt lint test coverage check docker-test
 
 PACKAGE_DIR:=python_template_project
 
@@ -22,6 +22,9 @@ pylint:
 
 bandit:
 	poetry run bandit -r $(PACKAGE_DIR) main.py
+
+flynt:
+	poetry run flynt $(PACKAGE_DIR) main.py
 
 lint:
 	$(MAKE) flake8

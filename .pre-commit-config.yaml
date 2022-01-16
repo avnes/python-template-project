@@ -48,3 +48,7 @@ repos:
       - id: bandit
         name: Find common security issues using bandit
         exclude: "tests/"
+  -   repo: https://github.com/ikamensh/flynt/
+      rev: '0.76'
+      hooks:
+      -   id: flynt
