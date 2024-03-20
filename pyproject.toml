@@ -12,7 +12,7 @@ types-requests = "^0.1.11"
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 flake8 = "^3.9.2"
-black = "^21.5b2"
+black = "^24.3"
 pre-commit = "^2.13.0"
 pytest-cov = "^2.12.1"
 bandit = "^1.7.0"
