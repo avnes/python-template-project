@@ -6,7 +6,7 @@ authors = ["Audun Nes <REDACTED>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-requests = "^2.31.0"
+requests = "^2.32.0"
 types-requests = "^0.1.11"
 
 [tool.poetry.dev-dependencies]
